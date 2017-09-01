@@ -901,6 +901,7 @@ static inline bool audio_is_offload_pcm(audio_format_t format)
 #ifdef QCOM_HARDWARE
     return ((format & AUDIO_FORMAT_MAIN_MASK) == AUDIO_FORMAT_PCM_OFFLOAD);
 #endif
+    (void)(format); // Crappy unused parameter warning/error fix.
     return false;
 }
 
